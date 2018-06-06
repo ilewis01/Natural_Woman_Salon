@@ -1,0 +1,142 @@
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.base-style {
+	background-color: #555838;
+	background-image: url('../images/background.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	text-align: center;
+	font-family: Arial;
+	font-size: 10px;
+	color: #999999;
+}
+
+.navbar {
+	/*background-color: #555838;*/
+	font-family: 'Fira Sans Condensed', sans-serif;
+	opacity: 0.7;
+	border-bottom: 1px solid #333333;
+	background: linear-gradient(#ced1a2, #555838);
+}
+
+.navbar-header a {
+	color: #ffffff;
+	font-family: 'Lovers Quarrel', cursive;
+}
+
+.navbar-header span {
+	font-size: 40px;
+}
+
+.collapse {
+	color: #ffffff;
+}
+
+.collapse li {
+	margin-left: 20px;
+	margin-top: 20px;
+	letter-spacing: 2px;
+}
+
+.collapse a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: normal;
+	-webkit-transition: color 0.5s; /* Safari */
+    transition: color 0.5s;
+}
+
+.collapse a:hover {
+	text-decoration: none;
+	color: #d0ff16;
+	-webkit-transition: color 0.5s; /* Safari */
+    transition: color 0.5s;
+    text-shadow: 1px 1px black;
+}
+
+.content-wrapper {
+	width: 100%;
+	height: 75%;
+	background-color: transparent;
+}
+
+.seperate-seven {
+	position: relative;
+	float:left;
+	width: 14.28%;
+	height: 90%;
+	opacity: 0.7;
+	/*border: 1px solid black;*/
+}
+
+.seperate-seven img {
+	width: 100%;
+	height: 100%;
+}
+
+.index-motto {
+	width:100%;
+	font-size: 80px;
+	text-align: right;
+	/*margin-right: 50px;*/
+	font-family: 'Lovers Quarrel', cursive;
+	position: absolute;
+	z-index: 2;
+	margin-top: 40%;
+	color: #cccba3;
+	padding-right: 50px;
+	text-shadow: 1px 1px black;
+}
+
+.index-motto span {
+	font-size: 40px;
+	color:#bfcc43;
+	position: absolute;
+	z-index: -1;
+	margin-left: -60px;
+	margin-top:40px;
+}
+
+.sub-motto {
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-size: 15px;
+	margin-top: -40px;
+	color: #ffffff;
+	font-style: italic;
+	letter-spacing: 2px;
+}
+
+.animate-logo {
+	position: absolute;
+	z-index: 3;
+	width: 100%;
+	height: 70%;
+	padding: 50px;
+	/*background-color: #333333;*/
+}
+
+.animate-logo img {
+	width: 60%;
+	margin-top: 15%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
