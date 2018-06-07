@@ -47,8 +47,8 @@
     <div class="">
         <nav class='navbar navbar-expand-sm' role="navigation">
             <div class="navbar-header">
-                <a href="#" class="navbar-brand"><i class="fas fa-leaf"></i>&nbspnaturl woman salon</a>
-                <!-- <a class="navbar-brand" href="#">NaturalWomanSalon</a> -->
+                <!-- <a href="/" class="navbar-brand"><i class="fas fa-leaf"></i>&nbspnaturl woman salon</a> -->
+                <!-- <a href="/" class="navbar-brand"><i class="fab fa-envira"></i>&nbspnaturl woman salon</a> -->
             </div>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,19 +59,67 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav ml-auto">
                     <!-- <li class="nav-item" id="btn0"><a href="home.html">HOME</a></li> -->
-                    <li class="nav-item" id="btn1"><a href="about.html">ABOUT</a></li>
-                    <li class="nav-item" id="btn2"><a href="services.html">SERVICES</a></li>
-                    <li class="nav-item" id="btn3"><a href="gallery.html">GALLERY</a></li>
-                    <li class="nav-item" id="btn4"><a href="blog.html">BLOG</a></li>
-                    <li class="nav-item" id="btn5"><a href="contact.html">CONTACT</a></li>
+                    <li class="nav-item" id="btn1"><a id="a1" href="/about">ABOUT</a></li>
+                    <li class="nav-item" id="btn2"><a id="a2" href="/services">SERVICES</a></li>
+                    <li class="nav-item" id="btn3"><a id="a3" href="/gallery">GALLERY</a></li>
+                    <li class="nav-item" id="btn4"><a id="a4" href="/blog">BLOG</a></li>
+                    <li class="nav-item" id="btn5"><a id="a5" href="/contact">CONTACT</a></li>
                 </ul>
             </div>
         </nav>          
     </div>  <!-- END OF NAVIGATION DIV -->
 
     <div class="content-wrapper">
-        {% block content %}
-        {% endblock %}
+        <div class="" id="all-extended">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="social-wrapper"> <!-- SOCIAL MEDIA -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="https://www.facebook.com/Natural-Woman-Salon-133665140595488/?ref=bookmarks" target="_blank" class="social-a">
+                                        <div class="social-div">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-4">                               
+                                    <a href="#" class="social-a">
+                                        <div class="social-div">
+                                            <i class="fab fa-twitter"></i>
+                                         </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-4">
+                                    <a href="https://www.instagram.com/naturalwomansalon/" target="_blank" class="social-a">
+                                        <div class="social-div">
+                                            <i class="fab fa-instagram" style="font-size:18px; line-height:25px;"></i>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- END SOCIAL WRAPPER -->
+
+                    <div class="">
+                        <div class=""> <!-- COPYRIGHT INFORMATION -->
+                            <div class="col-12 copyright">
+                                <p> Copyright &copy; 2018 Natural Woman Salon Detroit. All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
  
 

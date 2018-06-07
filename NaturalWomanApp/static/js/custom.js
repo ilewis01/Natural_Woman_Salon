@@ -7,7 +7,7 @@ function initialize_index( jQuery ) {
     $("#i6").hide();
     $("#i7").hide();
     // $("#motto").hide();
-    $("#animatedBrand").hide();
+    // $("#animatedBrand").hide();
 
     $("#i1").removeClass("hidden");
     $("#i2").removeClass("hidden");
@@ -17,7 +17,7 @@ function initialize_index( jQuery ) {
     $("#i6").removeClass("hidden");
     $("#i7").removeClass("hidden");
     // $("#motto").removeClass("hidden");
-    $("#animatedBrand").removeClass("hidden");
+    // $("#animatedBrand").removeClass("hidden");
 
     $("#i1").delay(500).fadeIn(700, "linear");
     $("#i2").delay(1000).fadeIn(700, "linear");
@@ -34,15 +34,19 @@ function initialize_index( jQuery ) {
 $( window ).on( "load", initialize_index );
 
 $(document).ready(function(){
-    $("#login-open").click(function(){
-        $("#login-fader").fadeIn();
-        $("#login-form").fadeIn();
+    $("#btn1").click(function(){
+        // $("#all-extended").fadeOut();
+        // $("#a1").attr("href", "/about");
+        // $("#btn1").click();
+        // $("#btn1").removeClass("nav-item");
+        // $("#btn1").addClass("active-item");
+        // $("#all-extended").fadeIn();
     });
 
-    $("#cancel-login").click(function(){
-        $("#login-form").fadeOut();
-        $("#login-fader").fadeOut();
-        $("#username").val("");
-        $("#password").val("");
-    });
+    // $("#cancel-login").click(function(){
+    //     $("#login-form").fadeOut();
+    //     $("#login-fader").fadeOut();
+    //     $("#username").val("");
+    //     $("#password").val("");
+    // });
 });

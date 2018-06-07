@@ -61,6 +61,17 @@ body {
     text-shadow: 1px 1px black;
 }
 
+.active-item a {
+	color: #d0ff16;
+    text-shadow: 1px 1px black;
+}
+
+.active-item a:hover {
+	text-decoration: none;
+	color: #d0ff16;
+    text-shadow: 1px 1px black;
+}
+
 .content-wrapper {
 	width: 100%;
 	height: 75%;
@@ -73,7 +84,6 @@ body {
 	width: 14.28%;
 	height: 90%;
 	opacity: 0.7;
-	/*border: 1px solid black;*/
 }
 
 .seperate-seven img {
@@ -85,7 +95,6 @@ body {
 	width:100%;
 	font-size: 80px;
 	text-align: right;
-	/*margin-right: 50px;*/
 	font-family: 'Lovers Quarrel', cursive;
 	position: absolute;
 	z-index: 2;
@@ -119,13 +128,69 @@ body {
 	width: 100%;
 	height: 70%;
 	padding: 50px;
-	/*background-color: #333333;*/
 }
 
 .animate-logo img {
 	width: 60%;
 	margin-top: 15%;
 }
+
+.footer {
+	width: 100%;
+	height: 16vh;
+	background-color: transparent;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.social-wrapper {
+	width: 200px;
+	height: 25px;
+	margin: auto;
+	text-align: center;
+	background-color: transparent;
+}
+
+.social-div  {
+	width: 25px;
+	height: 25px;
+	background: linear-gradient(#bfcc43, #575d1c);
+	border-radius: 25px;
+	margin:auto;
+	text-align: center;
+	box-shadow: 1px 1px 1px #000000;
+	margin-top:75%;
+}
+
+.social-div:hover {
+	background: linear-gradient(#868965, #393e05);
+}
+
+.social-a {
+	color: #4a4a49;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+.social-a:hover {
+	color: #cccba3;
+}
+
+.copyright {
+	font-family: arial;
+	font-size: 10px;
+	text-align: center;
+	color: #cccba3;
+	margin-top:10px;
+	letter-spacing: 1px;
+	position: absolute;
+	margin-top: 7%;
+}
+
+
+
 
 
 
