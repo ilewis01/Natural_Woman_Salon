@@ -19,7 +19,6 @@ body {
 }
 
 .navbar {
-	/*background-color: #555838;*/
 	font-family: 'Fira Sans Condensed', sans-serif;
 	opacity: 0.7;
 	border-bottom: 1px solid #333333;
@@ -35,13 +34,40 @@ body {
 	font-size: 40px;
 }
 
+.navbar-brand {
+	height:45px;
+	font-size: 20px !important;
+	text-shadow: 1px 1px black;
+}
+
+.navbar-brand p {
+	color: #fbfaca;
+	display:inline;
+	font-size: 40px;
+	padding-top: 50px;
+}
+
+.adjust-brand {
+	color: #fbfaca;
+	font-size: 40px;
+	position: relative;
+	float: left;
+}
+
+.icon-adjust {
+	color: #eafa52;
+	position: relative;
+	float: left;
+	padding-top:21px;
+}
+
 .collapse {
 	color: #ffffff;
 }
 
 .collapse li {
 	margin-left: 20px;
-	margin-top: 20px;
+	margin-top: 32px;
 	letter-spacing: 2px;
 }
 
@@ -55,7 +81,7 @@ body {
 
 .collapse a:hover {
 	text-decoration: none;
-	color: #d0ff16;
+	color: #e6fe04;
 	-webkit-transition: color 0.5s; /* Safari */
     transition: color 0.5s;
     text-shadow: 1px 1px black;
@@ -154,28 +180,33 @@ body {
 }
 
 .social-div  {
-	width: 25px;
-	height: 25px;
-	background: linear-gradient(#bfcc43, #575d1c);
+	width: 20px;
+	height: 20px;
+	background: linear-gradient(#868965, #393e05);
 	border-radius: 25px;
 	margin:auto;
 	text-align: center;
-	box-shadow: 1px 1px 1px #000000;
+	/*box-shadow: 1px 1px 1px #000000;*/
 	margin-top:75%;
+	border: 1px solid #333333;
+	-webkit-transition: background color 0.5s; /* Safari */
+    transition: color 0.5s;
 }
 
-.social-div:hover {
-	background: linear-gradient(#868965, #393e05);
+.social-div:hover {	
+	background: linear-gradient(#bfcc43, #575d1c);
+	-webkit-transition: color background 0.5s; /* Safari */
+    transition: color 0.5s;
 }
 
 .social-a {
-	color: #4a4a49;
-	font-size: 14px;
-	line-height: 25px;
+	color: #cccba3;
+	font-size: 10px;
+	line-height: 20px;
 }
 
 .social-a:hover {
-	color: #cccba3;
+	color: #4a4a49;	
 }
 
 .copyright {
@@ -183,10 +214,22 @@ body {
 	font-size: 10px;
 	text-align: center;
 	color: #cccba3;
-	margin-top:10px;
+	margin-top:30px;
 	letter-spacing: 1px;
 	position: absolute;
 	margin-top: 7%;
+}
+
+.media-wrapper {
+	position: absolute;
+	z-index: 1;
+	float: right;
+	top: 0;
+	right: 0;
+	width:90px;
+	height:20px;
+	margin-right:20px;
+	margin-top:13px;
 }
 
 
