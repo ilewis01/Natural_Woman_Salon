@@ -182,30 +182,33 @@ body {
 .social-div  {
 	width: 20px;
 	height: 20px;
-	background: linear-gradient(#868965, #393e05);
-	border-radius: 25px;
+	/*background: linear-gradient(#868965, #393e05);*/
+	background: linear-gradient(#fdfccc, #848368);
+	border-radius: 5px;
 	margin:auto;
 	text-align: center;
-	/*box-shadow: 1px 1px 1px #000000;*/
+	box-shadow: 1px 1px 1px #000000;
 	margin-top:75%;
-	border: 1px solid #333333;
-	-webkit-transition: background color 0.5s; /* Safari */
+	/*border: 1px solid #333333;*/
+	-webkit-transition: background 0.5s; /* Safari */
     transition: color 0.5s;
 }
 
 .social-div:hover {	
 	background: linear-gradient(#bfcc43, #575d1c);
-	-webkit-transition: color background 0.5s; /* Safari */
+	-webkit-transition: background 0.5s; /* Safari */
     transition: color 0.5s;
 }
 
 .social-a {
-	color: #cccba3;
-	font-size: 10px;
+	/*color: #cccba3;*/
+	color: #646216;
+	font-size: 11px;
 	line-height: 20px;
 }
 
 .social-a:hover {
+	/*color: #cccba3;*/
 	color: #4a4a49;	
 }
 
@@ -230,6 +233,42 @@ body {
 	height:20px;
 	margin-right:20px;
 	margin-top:13px;
+}
+
+.overlay {
+	width: 100%;
+	height: 70vh;
+	background-image: url('../images/overlay.png');
+	background-size: 100% 100%;
+	opacity: 0.7;
+}
+
+.content-head {
+	position: relative;
+	float:right;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	margin-right:20px;
+	text-shadow: 1px 1px black;
+	opacity: 0.9;
+}
+
+.content-icon {	
+	color: #bfcc43;
+	position: relative;
+	float: right;
+	font-size: 33px;
+	margin-top:23px;
+}
+
+.content-title {
+	position: relative;
+	float:right;
+	font-family: 'Lovers Quarrel', cursive;
+	font-size: 60px;
+	text-align: left;
+	color:#cccba3;
 }
 
 
