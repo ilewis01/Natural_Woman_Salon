@@ -3,27 +3,38 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-	return render_template('index.html')
+	post_load = -1
+	return render_template('index.html', value=post_load)
+
+@app.route("/home")
+def home():
+	post_load = 0
+	return render_template('index.html', value=post_load)
 
 @app.route("/about")
 def about():
-	return render_template('about.html')
+	post_load = 1
+	return render_template('about.html', value=post_load)
 
 @app.route("/services")
 def services():
-	return render_template('services.html')
+	post_load = 2
+	return render_template('services.html', value=post_load)
 
 @app.route("/gallery")
 def gallery():
-	return render_template('gallery.html')
+	post_load = 3
+	return render_template('gallery.html', value=post_load)
 
 @app.route("/blog")
 def blog():
-	return render_template('blog.html')
+	post_load = 4
+	return render_template('blog.html', value=post_load)
 
 @app.route("/contact")
 def contact():
-	return render_template('contact.html')
+	post_load = 5
+	return render_template('contact.html', value=post_load)
 
 # if __name__ == "__main__":
 # 		app.run()
