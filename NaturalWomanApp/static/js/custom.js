@@ -22,7 +22,7 @@ function load_home_page(jQuery)
 {
     $("#home_sliders").hide();
     $("#home_sliders").removeClass("hidden");
-    $("#home_sliders").fadeIn(800);
+    $("#home_sliders").fadeIn(200);
 }
 
 function load_inherited_page(post_load) {
@@ -31,7 +31,7 @@ function load_inherited_page(post_load) {
     $(btn).addClass("active-item");
     $("#inherit-base").hide();
     $("#inherit-base").removeClass("hidden");
-    $("#inherit-base").fadeIn(600);
+    $("#inherit-base").fadeIn(400);
 }
 
 function initialize(jQuery) {
@@ -45,11 +45,25 @@ function initialize(jQuery) {
     {
         load_home_page();
     }
+    else if (post_load === "5")
+    {
+        load_inherited_page(post_load);
+    }
     else
     {
         load_inherited_page(post_load);
     }
 }
+
+function initMap() {
+    // var map = new google.maps.Map(document.getElementById('map'), {
+    //     center: {lat: -34.397, lng: 150.644},
+    //     zoom: 8
+    //     });
+    alert("Initializing Map...");
+}
+
+
 
 $( window ).on( "load", initialize);
 
@@ -57,13 +71,13 @@ $(document).ready(function() {
     $("#a1").click(function() {
         if ($("#inherit-base" ).length)
         {
-            $( "#inherit-base" ).fadeOut(600, function() {
+            $( "#inherit-base" ).fadeOut(200, function() {
                  window.location.href = "/about"
             });
         }
         else
         {
-            $( "#home_sliders" ).fadeOut(600, function() {
+            $( "#home_sliders" ).fadeOut(400, function() {
                 window.location.href = "/about"
             });
         }
@@ -72,13 +86,13 @@ $(document).ready(function() {
      $("#a2").click(function() {
         if ($("#inherit-base" ).length)
         {
-            $( "#inherit-base" ).fadeOut(600, function() {
+            $( "#inherit-base" ).fadeOut(200, function() {
                 window.location.href = "/services"
             });
         }
         else
         {
-            $( "#home_sliders" ).fadeOut(600, function() {
+            $( "#home_sliders" ).fadeOut(400, function() {
                 window.location.href = "/services"
             });
         }
@@ -87,13 +101,13 @@ $(document).ready(function() {
      $("#a3").click(function() {
         if ($("#inherit-base" ).length)
         {
-            $( "#inherit-base" ).fadeOut(600, function() {
+            $( "#inherit-base" ).fadeOut(200, function() {
                 window.location.href = "/gallery"
             });
         }
         else
         {
-            $( "#home_sliders" ).fadeOut(600, function() {
+            $( "#home_sliders" ).fadeOut(400, function() {
                 window.location.href = "/gallery"
             });
         }
@@ -102,13 +116,13 @@ $(document).ready(function() {
      $("#a4").click(function() {
         if ($("#inherit-base" ).length)
         {
-            $( "#inherit-base" ).fadeOut(600, function() {
+            $( "#inherit-base" ).fadeOut(200, function() {
                 window.location.href = "/blog"
             });
         }
         else
         {
-            $( "#home_sliders" ).fadeOut(600, function() {
+            $( "#home_sliders" ).fadeOut(400, function() {
                 window.location.href = "/blog"
             });
         }
@@ -117,13 +131,13 @@ $(document).ready(function() {
      $("#a5").click(function() {
         if ($("#inherit-base" ).length)
         {
-            $( "#inherit-base" ).fadeOut(600, function() {
+            $( "#inherit-base" ).fadeOut(200, function() {
                 window.location.href = "/contact"
             });
         }
         else
         {
-            $( "#home_sliders" ).fadeOut(600, function() {
+            $( "#home_sliders" ).fadeOut(400, function() {
                 window.location.href = "/contact"
             });
         }
@@ -132,7 +146,7 @@ $(document).ready(function() {
      $("#a0").click(function() {
         if ($("#inherit-base" ).length)
         {
-            $( "#inherit-base" ).fadeOut(600, function() {
+            $( "#inherit-base" ).fadeOut(function() {
                 window.location.href = "/home"
             });
         }

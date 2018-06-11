@@ -36,5 +36,5 @@ def contact():
 	post_load = 5
 	return render_template('contact.html', value=post_load)
 
-# if __name__ == "__main__":
-# 		app.run()
+if __name__ == "__main__":
+		app.run()

@@ -98,12 +98,6 @@ body {
     text-shadow: 1px 1px black;
 }
 
-.content-wrapper {
-	width: 100%;
-	height: 75%;
-	background-color: transparent;
-}
-
 .seperate-seven {
 	position: relative;
 	float:left;
@@ -128,6 +122,8 @@ body {
 	color: #cccba3;
 	padding-right: 50px;
 	text-shadow: 1px 1px black;
+	-webkit-transition: font-size 0.3s; /* Safari */
+    transition: font-size 0.5s;
 }
 
 .index-motto span {
@@ -137,6 +133,8 @@ body {
 	z-index: -1;
 	margin-left: -60px;
 	margin-top:40px;
+	-webkit-transition: font-size 0.3s; /* Safari */
+    transition: font-size 0.5s;
 }
 
 .sub-motto {
@@ -146,6 +144,8 @@ body {
 	color: #ffffff;
 	font-style: italic;
 	letter-spacing: 2px;
+	-webkit-transition: font-size 0.3s; /* Safari */
+    transition: font-size 0.5s;
 }
 
 .footer {
@@ -200,6 +200,8 @@ body {
 	letter-spacing: 1px;
 	position: absolute;
 	margin-top: 7%;
+	-webkit-transition: font-size 0.3s; /* Safari */
+    transition: font-size 0.5s;
 }
 
 .media-wrapper {
@@ -212,6 +214,8 @@ body {
 	height:20px;
 	margin-right:20px;
 	margin-top:13px;
+	-webkit-transition: margin 0.7s; /* Safari */
+    transition: margin 0.7s;
 }
 
 .overlay {
@@ -223,10 +227,18 @@ body {
 	color:#ffffff;
 }
 
+.content-wrapper {
+	width: 100%;
+	height: 75%;
+	background-color: transparent;
+	text-align: center;
+	color: white;
+}
+
 .content-head {
 	position: relative;
-	float:right;
-	right: 0;
+	float:left;
+	left: 0;
 	top: 0;
 	z-index: 1;
 	margin-right:20px;
@@ -237,19 +249,299 @@ body {
 .content-icon {	
 	color: #bfcc43;
 	position: relative;
-	float: right;
+	float: left;
 	font-size: 33px;
-	margin-top:23px;
+	margin-top:33px;
+	-webkit-transition: font-size  0.7s; /* Safari */
+    transition: font-size  0.7s;
 }
 
 .content-title {
 	position: relative;
-	float:right;
+	float:left;
 	font-family: 'Lovers Quarrel', cursive;
-	font-size: 60px;
+	font-size: 70px;
 	text-align: left;
 	color:#cccba3;
+	-webkit-transition: font-size  0.7s; /* Safari */
+    transition: font-size  0.7s;
 }
+
+.content-body {
+	width: 100%;
+	height: 75vh;
+	background-color: transparent;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	margin-top:9%;
+}
+
+.content-data {
+	width: 100%;
+	height: 98%;
+	margin: auto;
+	margin-top: 65px;
+	text-align: center;
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	background-color: transparent;
+	overflow-y: scroll;
+	-webkit-transition: margin 0.7s; /* Safari */
+    transition: margin 0.7s;
+    text-shadow: 1px 1px black;
+    color: #fffeec;
+}
+
+.flip {
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.message-wrapper {
+	width: 100%;
+	height: 70vh;
+	background-color: transparent;
+	text-align: left;
+}
+
+.message-wrapper h3 {
+	font-size: 23px;
+}
+
+.message-wrapper p {
+	font-style: italic;
+}
+
+.form_holder {
+	width:100%;
+	background-color: transparent;
+	margin-top:10%;
+}
+
+.form_holder input {
+	width: 100%;
+	border-radius: 5px;
+	padding-left:10px;
+	color: #000000;
+	margin-bottom: 20px;
+}
+
+.input-title {
+	text-align: right;
+	margin-right: -25px;
+	line-height: 25px;
+	letter-spacing: 1px;
+}
+
+.lg-text-box {
+	width: 100%;
+	height:20vh;
+}
+
+.lg-text-box textarea {
+	width: 100%;
+	height: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	border-color: #cccccc;
+}
+
+.msg-btn {
+	width:100%;
+	text-align: left;
+	margin-top:12px;
+}
+
+.msg-btn button {
+	width: 100px;
+	border-radius: 5px;
+	padding-top:2px;
+}
+
+.msg-btn i {
+	color:#bfcc43;
+	text-shadow: 1px 1px #000000;
+	font-size: 14px;
+}
+
+.address-wrapper {
+	width: 100%;
+	height: 70vh;
+	background-color: transparent;
+}
+
+.address-box {
+	width: 100%;
+	height: 56%;
+	text-align: right;
+}
+
+.contact-header {
+	font-size: 16px;
+	text-decoration: underline;
+	letter-spacing: 1px;
+}
+
+.text-left {
+	width: 100%;
+	text-align: left;
+	background-color: transparent;
+	letter-spacing: 3px;
+	font-size: 14px;
+}
+
+.warning-note {
+	font-size: 12px;
+	font-style: italic;-
+}
+
+.map {
+	width: 225px;
+	height: 225px;
+	position: relative;
+	float: right;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	margin-top:15px;
+	/*background-color: #ffffff;*/
+}
+
+
+
+
+
+
+
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fa151a;
+    opacity: 0.3; /* Firefox */
+    font-style: italic;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fa151a;
+    opacity: 0.3; 
+    font-style: italic;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fa151a;
+    opacity: 0.3; 
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 582px) {
+  div.index-motto {
+    font-size: 50px;
+    -webkit-transition: font-size  0.7s; /* Safari */
+    transition: font-size  0.7s;
+  }
+
+  div.sub-motto {
+    font-size: 10px;
+    margin-top: -25px;
+    -webkit-transition: font-size margin0.7s; /* Safari */
+    transition: font-size margin 0.7s;
+  }
+
+  div.index-motto span{
+    font-size: 20px;
+    margin-top: 28px;
+    margin-left: -45px;
+    -webkit-transition: font-size margin 0.7s; /* Safari */
+    transition: font-size margin 0.7s;
+  }
+
+  div.media-wrapper {
+    left:0;
+    margin-top: 3px;
+    -webkit-transition: margin  0.7s; /* Safari */
+    transition: margin  0.7s;
+  }
+
+  div.content-title {
+    font-size: 45px;
+    -webkit-transition: font-size 0.7s; /* Safari */
+    transition: font-size 0.7s;
+  }
+
+  div.content-icon {
+    font-size: 20px;
+    -webkit-transition: font-size 0.7s; /* Safari */
+    transition: font-size 0.7s;
+  }
+
+  div.content-data {
+    margin-top: 13%;
+    -webkit-transition: margin 0.7s; /* Safari */
+    transition: margin 0.7s;
+  }
+
+  div.copyright {
+    font-size: 7px;
+    -webkit-transition: font-size 0.7s; /* Safari */
+    transition: font-size 0.7s;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+	div.content-data {
+    margin-top: 5%;
+    -webkit-transition: margin 0.7s; /* Safari */
+    transition: margin 0.7s;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+	div.input-title {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 900px) {
+	div.content-data {
+    margin-top: 10%;
+    -webkit-transition: margin 0.7s; /* Safari */
+    transition: margin 0.7s;
+  }
+}
+
+@media screen and (max-width: 700px) {
+	div.content-data {
+    margin-top: 15%;
+    -webkit-transition: margin 0.7s; /* Safari */
+    transition: margin 0.7s;
+  }
+}
+
+@media screen and (max-width: 532px) {
+	div.content-data {
+    margin-top: 20%;
+    -webkit-transition: margin 0.7s; /* Safari */
+    transition: margin 0.7s;
+  }
+}
+
+
 
 
 
