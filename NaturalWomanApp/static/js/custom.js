@@ -60,20 +60,52 @@ function removeHeight(index) {
     var hidden = document.getElementById("selected");
     var current = String(hidden.value);
 
-    if (current !== div_name)
+    if (current !== index)
     {
+        var p_id = "p" + index;
+        var old_p_id = "p" + current;
         var old_div_name = "blog" + current;
         var div_name = "blog" + index;
         var label_name = "label" + index;
         var old_label_name = "label" + current;
         var label = document.getElementById(label_name);
         var old_label = document.getElementById(old_label_name);
-        label.innerHTML = "<i class=\"far fa-check-circle\"></i>";
-        old_label.innerHTML = "<i class=\"far fa-circle\"></i>";
+        label.innerHTML = "<i class=\"far fa-check-circle icon-active label_lg id=\"" + p_id + "\"></i>";
+        old_label.innerHTML = "<i class=\"far fa-circle label_sm id=\"" + old_p_id + "\"></i>";
         hidden.value = index;
+        document.getElementById(p_id).className = "fas fa-play flip arrow-iel tan_play";
+        document.getElementById(old_p_id).className = "fas fa-play flip arrow-iel olive_play";
         document.getElementById(div_name).classList.remove("bh");
         document.getElementById(old_div_name).className = "content-inner bh";
+
+        if (index === "0")
+        {
+            document.getElementById('label0').className = "top-cover";
+        }
+        else
+        {
+            document.getElementById('label0').className = "top-raise";
+        }
+
+        var num_entries = String(document.getElementById("num_entries").value)
+
+        if (index === num_entries) 
+        {
+            document.getElementById('label' + num_entries).className = "bottom-cover";
+        }
+        else
+        {
+            document.getElementById('label0').className = "top-raise";
+        }
     }     
+}
+
+function load_blog_entry(index) {
+    index = String(index);
+    var radio_name = "e" + index;
+    var radio = document.getElementById(radio_name);
+    radio.click();
+    removeHeight(index);
 }
 
 
