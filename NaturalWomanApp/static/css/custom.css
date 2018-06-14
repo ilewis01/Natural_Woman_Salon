@@ -305,6 +305,23 @@ body {
     -ms-filter: "FlipH";
 }
 
+.blog-data {
+	width: 95%;
+	height: 90%;
+	margin: auto;
+	overflow-y: hidden; 
+	background-color: transparent;
+}
+
+.blogger {
+	width: 100%;
+	margin: auto;
+	margin-top: -40px;
+	background-color: transparent;
+	overflow-y: hidden; 
+	height:100%;
+}
+
 .message-wrapper {
 	width: 100%;
 	height: 70vh;
@@ -318,6 +335,10 @@ body {
 
 .message-wrapper p {
 	font-style: italic;
+}
+
+.space_lg {
+	letter-spacing: 0.5px;
 }
 
 .form_holder {
@@ -486,6 +507,7 @@ body {
 
   div.content-icon {
     font-size: 20px;
+    margin-top: 20px;
     -webkit-transition: font-size 0.7s; /* Safari */
     transition: font-size 0.7s;
   }
@@ -530,6 +552,10 @@ body {
     margin-top: 15%;
     -webkit-transition: margin 0.7s; /* Safari */
     transition: margin 0.7s;
+  }
+
+  div.address-wrapper {
+  	margin-top: 100px;
   }
 }
 

@@ -55,12 +55,25 @@ function initialize(jQuery) {
     }
 }
 
-function initMap() {
-    // var map = new google.maps.Map(document.getElementById('map'), {
-    //     center: {lat: -34.397, lng: 150.644},
-    //     zoom: 8
-    //     });
-    alert("Initializing Map...");
+function removeHeight(index) {
+    index = String(index);
+    var hidden = document.getElementById("selected");
+    var current = String(hidden.value);
+
+    if (current !== div_name)
+    {
+        var old_div_name = "blog" + current;
+        var div_name = "blog" + index;
+        var label_name = "label" + index;
+        var old_label_name = "label" + current;
+        var label = document.getElementById(label_name);
+        var old_label = document.getElementById(old_label_name);
+        label.innerHTML = "<i class=\"far fa-check-circle\"></i>";
+        old_label.innerHTML = "<i class=\"far fa-circle\"></i>";
+        hidden.value = index;
+        document.getElementById(div_name).classList.remove("bh");
+        document.getElementById(old_div_name).className = "content-inner bh";
+    }     
 }
 
 
