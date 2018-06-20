@@ -52,9 +52,10 @@ function initialize(jQuery) {
     {
         load_home_page();
     }
-    else if (post_load === "5")
+    else if (post_load === "2")
     {
-        load_inherited_page(post_load);
+         $("#alert").fadeOut();
+         load_inherited_page(post_load);
     }
     else
     {
@@ -107,10 +108,11 @@ function removeHeight(index) {
     }     
 }
 
-function load_service_description(element)
+function load_service_description(product_id)
 {
-    //This is where I will write the code to load the descriptions on the pricing page
-    //The input is the HTML element to be loaded
+    product_id = String(product_id);
+    $("#alert").removeClass("hidden");
+    $("#alert").fadeIn(500);
 }
 
 function load_blog_entry(index) {
@@ -221,10 +223,10 @@ $(document).ready(function() {
                 window.location.href = "/"
             });
         }
-        else
-        {
-            
-        }
+    });
+
+     $("#close-this").click(function() {
+        $("#alert").fadeOut(500);
     });
 });
 
