@@ -75,16 +75,16 @@ body {
 	color: #ffffff;
 	text-decoration: none;
 	font-weight: normal;
-	/*-webkit-transition: color 0.5s; 
-    transition: color 0.5s;*/
+	-webkit-transition: color 0.6s; 
+    transition: color 0.6s;
 }
 
 .collapse a:hover {
 	text-decoration: none;
 	color: #e6fe04;
 	text-shadow: 1px 1px black;
-	/*-webkit-transition: color 0.5s; 
-    transition: color 0.5s; */
+	-webkit-transition: color 0.6s; 
+    transition: color 0.6s; 
 }
 
 .active-item a {
