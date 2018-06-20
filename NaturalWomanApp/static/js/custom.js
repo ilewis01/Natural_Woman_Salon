@@ -100,6 +100,12 @@ function removeHeight(index) {
     }     
 }
 
+function load_service_description(element)
+{
+    //This is where I will write the code to load the descriptions on the pricing page
+    //The input is the HTML element to be loaded
+}
+
 function load_blog_entry(index) {
     index = String(index);
     var radio_name = "e" + index;
