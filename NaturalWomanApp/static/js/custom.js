@@ -22,7 +22,7 @@ function load_home_page(jQuery)
 {
     $("#home_sliders").hide();
     $("#home_sliders").removeClass("hidden");
-    $("#home_sliders").fadeIn(200);
+    $("#home_sliders").fadeIn(500);
 }
 
 function load_inherited_page(post_load) {
@@ -31,7 +31,7 @@ function load_inherited_page(post_load) {
     $(btn).addClass("active-item");
     $("#inherit-base").hide();
     $("#inherit-base").removeClass("hidden");
-    $("#inherit-base").fadeIn(400);
+    $("#inherit-base").fadeIn(500);
 }
 
 function initialize(jQuery) {
@@ -116,13 +116,13 @@ $(document).ready(function() {
     $("#a1").click(function() {
         if ($("#inherit-base" ).length)
         {
-            $( "#inherit-base" ).fadeOut(200, function() {
+            $( "#inherit-base" ).fadeOut(500, function() {
                  window.location.href = "/about"
             });
         }
         else
         {
-            $( "#home_sliders" ).fadeOut(400, function() {
+            $( "#home_sliders" ).fadeOut(500, function() {
                 window.location.href = "/about"
             });
         }
@@ -131,13 +131,13 @@ $(document).ready(function() {
      $("#a2").click(function() {
         if ($("#inherit-base" ).length)
         {
-            $( "#inherit-base" ).fadeOut(200, function() {
+            $( "#inherit-base" ).fadeOut(500, function() {
                 window.location.href = "/services"
             });
         }
         else
         {
-            $( "#home_sliders" ).fadeOut(400, function() {
+            $( "#home_sliders" ).fadeOut(500, function() {
                 window.location.href = "/services"
             });
         }
@@ -146,13 +146,13 @@ $(document).ready(function() {
      $("#a3").click(function() {
         if ($("#inherit-base" ).length)
         {
-            $( "#inherit-base" ).fadeOut(200, function() {
+            $( "#inherit-base" ).fadeOut(500, function() {
                 window.location.href = "/gallery"
             });
         }
         else
         {
-            $( "#home_sliders" ).fadeOut(400, function() {
+            $( "#home_sliders" ).fadeOut(500, function() {
                 window.location.href = "/gallery"
             });
         }
@@ -161,13 +161,13 @@ $(document).ready(function() {
      $("#a4").click(function() {
         if ($("#inherit-base" ).length)
         {
-            $( "#inherit-base" ).fadeOut(200, function() {
+            $( "#inherit-base" ).fadeOut(500, function() {
                 window.location.href = "/blog"
             });
         }
         else
         {
-            $( "#home_sliders" ).fadeOut(400, function() {
+            $( "#home_sliders" ).fadeOut(500, function() {
                 window.location.href = "/blog"
             });
         }
@@ -176,13 +176,13 @@ $(document).ready(function() {
      $("#a5").click(function() {
         if ($("#inherit-base" ).length)
         {
-            $( "#inherit-base" ).fadeOut(200, function() {
+            $( "#inherit-base" ).fadeOut(500, function() {
                 window.location.href = "/contact"
             });
         }
         else
         {
-            $( "#home_sliders" ).fadeOut(400, function() {
+            $( "#home_sliders" ).fadeOut(500, function() {
                 window.location.href = "/contact"
             });
         }
@@ -193,6 +193,19 @@ $(document).ready(function() {
         {
             $( "#inherit-base" ).fadeOut(function() {
                 window.location.href = "/home"
+            });
+        }
+        else
+        {
+            
+        }
+    });
+
+     $("#a-1").click(function() {
+        if ($("#inherit-base" ).length)
+        {
+            $( "#inherit-base" ).fadeOut(function() {
+                window.location.href = "/"
             });
         }
         else

@@ -88,13 +88,13 @@ body {
 }
 
 .active-item a {
-	color: #d0ff16;
+	color: #e6fe04;
     text-shadow: 1px 1px black;
 }
 
 .active-item a:hover {
 	text-decoration: none;
-	color: #d0ff16;
+	color: #e6fe04;
     text-shadow: 1px 1px black;
 }
 
@@ -236,11 +236,11 @@ body {
 }
 
 .content-head {
-	position: relative;
+	position: absolute;
 	float:left;
 	left: 0;
 	top: 0;
-	z-index: 1;
+	z-index: 5;
 	margin-right:20px;
 	text-shadow: 1px 1px black;
 	opacity: 0.9;
@@ -305,6 +305,40 @@ body {
     -ms-filter: "FlipH";
 }
 
+.about_img {
+	width: 100%;
+	background-color: transparent;
+	/*height: 90vh;*/
+	opacity: 0.7;
+	position: relative;
+	float: right;
+	padding-top:4%;
+}
+
+.about_img img {
+	width: 100%;
+}
+
+.about-data {
+	width: 85%;
+	margin: auto;
+	height: 60%;
+	overflow-y: scroll;
+	background-color: transparent; 
+	text-align: justify;
+	font-size: 14px;
+	padding-top: 5%;
+}
+
+.about-data p {
+	text-align: right;
+	font-family: 'Lovers Quarrel', cursive;
+	font-size: 50px;
+	margin-top: 4%;
+	color: #bfcc43;
+
+}
+
 .blog-data {
 	width: 95%;
 	height: 90%;
@@ -318,7 +352,7 @@ body {
 	margin: auto;
 	margin-top: -40px;
 	background-color: transparent;
-	overflow-y: hidden; 
+	overflow-y: scroll; 
 	height:100%;
 }
 
