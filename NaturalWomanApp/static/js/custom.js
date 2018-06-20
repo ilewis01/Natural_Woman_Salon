@@ -1,4 +1,7 @@
 function initialize_index(jQuery) {
+    $("#btn0").removeClass("nav-item");
+    $("#btn0").addClass("active-item");
+
     $("#i1").hide();
     $("#i2").hide();
     $("#i3").hide();
@@ -20,6 +23,10 @@ function initialize_index(jQuery) {
 
 function load_home_page(jQuery)
 {
+    var post_load = String(document.getElementById('post_load').value);
+    var btn = "#btn" + post_load;
+    $(btn).removeClass("nav-item");
+    $(btn).addClass("active-item");
     $("#home_sliders").hide();
     $("#home_sliders").removeClass("hidden");
     $("#home_sliders").fadeIn(500);
