@@ -2,28 +2,45 @@
 
 {% block content %}
 
-<div id="inherit-base" class="hidden">
-	<!-- <div class="content-head">	
-		<div class="content-title">contact us...</div>
-		<div class="content-icon"><i class="fab fa-envira content"></i></div>
-	</div> -->
+<div id="inherit-base" class="hidden inherit-base">
+	<input type="hidden" id="index" value="0">
+	<div class="fill-container">
+		<div class="fill-row">
+			<div class="content-head2">
+				<div class="container fill">
+					<div class="row fill">
+						<div class="col-sm-12">
+							<div class="content-title2">photo gallery</div>
+							<div class="content-icon2 flip"><i class="fab fa-envira content"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="content-head">
-					<div class="content-title">photo gallery</div>
-					<div class="content-icon flip"><i class="fab fa-envira content"></i></div>
+			<div class="content-body2">
+				<div class="left-nav">
+					<a href="#">
+						<i class="fas fa-chevron-circle-left"></i>
+					</a>
+				</div>
+
+				<div class="right-nav">
+					<a href="#">
+						<i class="fas fa-chevron-circle-right"></i>
+					</a>
+				</div>
+
+				<div class="photo-wrapper">
+					<ul>
+						<li><a href="#"><img src="static/images/a1.png" id="img1"></a></li>
+						<li><a href="#"><img src="static/images/a2.png" id="img2"></a></li>
+						<li><a href="#"><img src="static/images/a3.png" id="img3"></a></li>
+						<li><a href="#"><img src="static/images/a4.png" id="img4"></a></li>
+						<li><a href="#"><img src="static/images/a5.png" id="img5"></a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<div class="content-body">
-		<div class="content-data">
-			<h1>Coming Soon...</h1>
-		</div>
-	</div>
 </div>
-
 {% endblock %}

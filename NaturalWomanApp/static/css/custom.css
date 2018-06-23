@@ -240,6 +240,12 @@ body {
 	color:#ffffff;
 }
 
+.inherit-base {
+	width: 100%;
+	height: 91.5vh;
+	background-color: transparent;
+}
+
 .content-wrapper {
 	width: 100%;
 	height: 75%;
@@ -259,14 +265,122 @@ body {
 	opacity: 0.9;
 }
 
+.fill {
+	width: 100%;
+	height:100%;
+}
+
+.fill-container {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background-color: transparent;
+}
+
+.fill-row {
+	width:100%;
+	height: 100%;
+	padding: 0;
+	margin: auto;
+	background-color: transparent;
+}
+
+.content-head2 {
+	width:100%;
+	height: 12%;
+	text-shadow: 1px 1px black;
+	background-color:transparent;
+}
+
+.content-body2 {
+	width:100%;
+	height:83%;
+	background-color: transparent;
+	margin: none;
+	padding:0;
+}
+
+.content-title2 {
+	position: relative;
+	float:left;
+	font-family: 'Lovers Quarrel', cursive;
+	font-size: 55px;
+	text-align: left;
+	color:#eef0d9;
+}
+
+.content-icon2 {	
+	color: #bfcc43;
+	position: relative;
+	float: left;
+	font-size: 33px;
+	margin-top:21px;
+}
+
+.photo-wrapper {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.photo-wrapper ul {
+	width: 100%;
+	height: 85%;
+	overflow: hidden;
+	padding:0;
+	margin: 0;
+}
+
+.photo-wrapper li {
+	width: 20%;
+	height: 100%;
+	/*border:1px solid black;*/
+	float: left;
+	list-style:none;
+	background-color: #ffffff;
+}
+
+.photo-wrapper img:hover {
+	opacity: 0.8;
+}
+
+.photo-wrapper img {
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    width:100%;
+    height:100%;
+}
+
+.left-nav {
+	position: absolute;
+  	top: 50%;
+  	transform: perspective(1px) translateY(-50%);
+  	float:left;
+  	left:0;
+  	z-index: 1;
+  	font-size: 45px;
+  	text-shadow: 1px 1px black;
+  	margin-left: 2%;
+}
+
+.right-nav {
+	position: absolute;
+  	top: 50%;
+  	transform: perspective(1px) translateY(-50%);
+  	float:right;
+  	right:0;
+  	z-index: 1;
+  	font-size: 45px;
+  	text-shadow: 1px 1px black;
+  	margin-right: 2%;
+}
+
 .content-icon {	
 	color: #bfcc43;
 	position: relative;
 	float: left;
 	font-size: 33px;
 	margin-top:33px;
-	/*-webkit-transition: font-size  0.7s; 
-    transition: font-size  0.7s;*/
 }
 
 .content-title {

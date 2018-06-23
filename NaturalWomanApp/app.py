@@ -3,38 +3,57 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-	post_load = -1
-	return render_template('index.html', value=post_load)
+	content = {}
+	content["title"] = "Natural Woman Salon"
+	content["post_load"] = -1
+	return render_template('index.html', **content)
 
 @app.route("/home")
 def home():
-	post_load = 0
-	return render_template('index.html', value=post_load)
+	content = {}
+	content["title"] = "Natural Woman Salon | Home"
+	content["post_load"] = 0
+	return render_template('index.html', **content)
 
 @app.route("/about")
 def about():
-	post_load = 1
-	return render_template('about.html', value=post_load)
+	content = {}
+	content["title"] = "Natural Woman Salon | About"
+	content["post_load"] = 1
+	return render_template('about.html', **content)
 
 @app.route("/services")
 def services():
-	post_load = 2
-	return render_template('services.html', value=post_load)
+	content = {}
+	content["title"] = "Natural Woman Salon | Pricing"
+	content['post_load'] = 2
+	return render_template('services.html', **content)
 
 @app.route("/gallery")
 def gallery():
-	post_load = 3
-	return render_template('gallery.html', value=post_load)
+	content = {}
+	content["title"] = "Natural Woman Salon | Galley"
+	content["post_load"] = 3
+	return render_template('gallery.html', **content)
 
 @app.route("/blog")
 def blog():
-	post_load = 4
-	return render_template('blog.html', value=post_load)
+	content = {}
+	content["title"] = "Natural Woman Salon | Blog"
+	content["post_load"] = 4
+	return render_template('blog.html', **content)
 
 @app.route("/contact")
 def contact():
-	post_load = 5
-	return render_template('contact.html', value=post_load)
+	content = {}
+	content["title"] = "Natural Woman Salon | Contact"
+	content["post_load"] = 5
+	return render_template('contact.html', **content)
 
 if __name__ == "__main__":
 		app.run()
+
+
+
+
+
