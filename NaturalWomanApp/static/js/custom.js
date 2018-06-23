@@ -9,8 +9,10 @@ function initialize_index(jQuery) {
     $("#i5").hide();
     $("#i6").hide();
     $("#i7").hide();
+    $("#alert").hide();
 
     $("#home_sliders").removeClass("hidden");
+    $("#alert").removeClass("hidden");
 
     $("#i1").delay(500).fadeIn(700, "linear");
     $("#i2").delay(1000).fadeIn(700, "linear");
@@ -127,6 +129,88 @@ function load_blog_entry(index) {
     removeHeight(index);
 }
 
+function clear_blog()
+{
+    if ($("#blog-content").val().length || $("#blog-subject").val())
+    {
+        $("#blog-content").val("");
+        $("#blog-subject").val("");
+    }
+}
+
+function master_closer()
+{
+    $("#alert").fadeOut(500);
+}
+
+function post_new_blog()
+{
+    alert("Posting Blog");
+    $("#alert").fadeOut(500);
+}
+
+function init_image_upload()
+{
+    alert("Uploading Image...");
+    $("#alert").fadeOut(500);
+}
+
+function build_new_blog()
+{
+    var html = "<div class=\"new_blog_container vert-center background_gn\"> ";
+    html += "<div class=\"full_w\"> ";
+    html += "<div class=\"login-leaf-all\"><i class=\"fab fa-envira flip\"></i></div> ";
+    html += "<div class=\"lovely_header\">new blog post</div></div> ";
+    html += "<form action=\"\" method=\"\" id=\"master_form\"> ";
+    html += "<input type=\"text\" name=\"blog-subject\" id=\"blog-subject\" placeholder=\"Subject\" required> ";
+    html += "<div class=\"blog-text-container\"> ";
+    html += "<textarea name=\"blog-content\" id=\"blog-content\" required></textarea></div></form> ";
+    html += "<div class=\"full_w\"> ";
+    html += "<div class=\"master_button_holder_right\"> ";
+    html += "<button onClick=\"javascript: post_new_blog();\">Post</button> ";
+    html += "<button onClick=\"javascript: clear_blog();\">Clear</button> ";
+    html += "<button onClick=\"javascript: master_closer();\">Cancel</button></div></div></div> ";
+    return html;
+}
+
+
+function build_new_image()
+{
+    var html = "<div class=\"pix_form  pop_up_properties vert-center background_gn\"> ";
+    html += "<div class=\"full_w\">";
+    html += "<div class=\"login-leaf-all\"><i class=\"fab fa-envira flip\"></i></div> ";
+    html += "<div class=\"lovely_header\">Upload Photo</div> </div> ";
+    html += " <form action=\"\" method=\"\" id=\"master_form\">";
+    html += "<input type=\"file\" name=\"image\" id=\"image\" class=\"fix-btn1\"></form> ";
+    html += "<div class=\"full_w\"> <div class=\"master_button_holder_double\">";
+    html += "<button onClick=\"javascript: init_image_upload();\">Upload</button>&nbsp";
+    html += "<button onClick=\"javascript: master_closer();\">cancel</button> </div> </div> </div>";
+    return html;
+}
+
+function load_frame(alert_type)
+{
+    var html = "";
+    alert_type = String(alert_type);
+
+    if (alert_type === "new_blog")
+    {
+        html = build_new_blog();
+    }
+    else if (alert_type === "new_pix")
+    {
+        html = build_new_image();
+    }
+
+    if (html.length)
+    {
+        $("#alert").hide();
+        $("#alert").removeClass("hidden");
+        $("#alert").html(html);
+        $("#alert").fadeIn(500);
+    }
+}
+
 
 
 $( window ).on( "load", initialize);
@@ -207,7 +291,67 @@ $(document).ready(function() {
         }
     });
 
-     $("#a0").click(function() {
+     $("#a6").click(function() {
+        if ($("#inherit-base" ).length)
+        {
+            $( "#inherit-base" ).fadeOut(500, function() {
+                window.location.href = "/tools"
+            });
+        }
+        else
+        {
+            $( "#home_sliders" ).fadeOut(500, function() {
+                window.location.href = "/tools"
+            });
+        }
+    });
+
+     $("#a7").click(function() {
+        if ($("#inherit-base" ).length)
+        {
+            $( "#inherit-base" ).fadeOut(500, function() {
+                window.location.href = "/admin"
+            });
+        }
+        else
+        {
+            $( "#home_sliders" ).fadeOut(500, function() {
+                window.location.href = "/admin"
+            });
+        }
+    });
+
+    $("#a8").click(function() {
+        if ($("#inherit-base" ).length)
+        {
+            $( "#inherit-base" ).fadeOut(500, function() {
+                window.location.href = "/account"
+            });
+        }
+        else
+        {
+            $( "#home_sliders" ).fadeOut(500, function() {
+                window.location.href = "/account"
+            });
+        }
+    });
+
+    $("#a9").click(function() {
+        if ($("#inherit-base" ).length)
+        {
+            $( "#inherit-base" ).fadeOut(500, function() {
+                window.location.href = "/logout"
+            });
+        }
+        else
+        {
+            $( "#home_sliders" ).fadeOut(500, function() {
+                window.location.href = "/logout"
+            });
+        }
+    });
+
+    $("#a0").click(function() {
         if ($("#inherit-base" ).length)
         {
             $( "#inherit-base" ).fadeOut(function() {
@@ -220,7 +364,7 @@ $(document).ready(function() {
         }
     });
 
-     $("#a-1").click(function() {
+    $("#a-1").click(function() {
         if ($("#inherit-base" ).length)
         {
             $( "#inherit-base" ).fadeOut(function() {
@@ -229,76 +373,171 @@ $(document).ready(function() {
         }
     });
 
-     $("#close-this").click(function() {
+    $("#close-this").click(function() {
         $("#alert").fadeOut(500);
     });
 
-     $("#item1").mouseenter(function() {
-        $("#ph1").hide();
-        $("#ph1").removeClass("hidden");
-        $("#ph1").addClass("p-message");
-        $("#ph1").html("click for details!");
-        $("#ph1").delay(100).slideDown(400);
+    $("#motto").click(function() {
+        $("#alert").fadeIn(500);
     });
 
-     $("#item1").mouseleave(function() {
+    $("#login-btn").click(function() {
+        $("#alert").fadeOut(500);
+        $( "#home_sliders" ).fadeOut(500, function() {
+            window.location.href = "/tools"
+        });
+    });
+
+     $("#item1").mouseenter(function() {
+        if ($("#tools-page").length)
+        {
+            var html ="<div class=\"center-leaf\" id=\"center-leaf\"><i class=\"fab fa-envira\"></i></div>";
+            html += "Create a new blog entry";
+
+            $("#ph1").hide();
+            $("#ph1").addClass("t-message");
+            $("#ph1").removeClass("hidden");
+            $("#ph1").html(html);
+            $("#ph1").delay(100).slideDown(400);
+        }
+        else
+        {
+            $("#ph1").hide();
+            $("#ph1").removeClass("hidden");
+            $("#ph1").addClass("p-message");
+            $("#ph1").html("click for details!");
+            $("#ph1").delay(100).slideDown(400);
+        }
+    });
+
+    $("#item1").mouseleave(function() {
         $("#ph1").slideUp(500);
     });
 
      $("#item2").mouseenter(function() {
-        $("#ph2").hide();
-        $("#ph2").removeClass("hidden");
-        $("#ph2").addClass("p-message");
-        $("#ph2").html("click for details!");
-        $("#ph2").delay(100).slideDown(400);
+        if ($("#tools-page").length)
+        {
+            var html ="<div class=\"center-leaf\" id=\"center-leaf\"><i class=\"fab fa-envira\"></i></div>";
+            html += "Edit previous blog entries";
+
+            $("#ph2").hide();
+            $("#ph2").removeClass("hidden");
+            $("#ph2").addClass("t-message");
+            $("#ph2").html(html);
+            $("#ph2").delay(100).slideDown(400);
+        }
+        else 
+        {
+            $("#ph2").hide();
+            $("#ph2").removeClass("hidden");
+            $("#ph2").addClass("p-message");
+            $("#ph2").html("click for details!");
+            $("#ph2").delay(100).slideDown(400);
+        }
     });
 
-     $("#item2").mouseleave(function() {
+    $("#item2").mouseleave(function() {
         $("#ph2").slideUp(500);
     });
 
-     $("#item3").mouseenter(function() {
-        $("#ph3").hide();
-        $("#ph3").removeClass("hidden");
-        $("#ph3").addClass("p-message");
-        $("#ph3").html("click for details!");
-        $("#ph3").delay(100).slideDown(400);
+    $("#item3").mouseenter(function() {
+        if ($("#tools-page").length) 
+        {
+            var html ="<div class=\"center-leaf\" id=\"center-leaf\"><i class=\"fab fa-envira\"></i></div>";
+            html += "update product prices";
+
+            $("#ph3").hide();
+            $("#ph3").removeClass("hidden");
+            $("#ph3").addClass("t-message");
+            $("#ph3").html(html);
+            $("#ph3").delay(100).slideDown(400);
+        }
+        else
+        {
+            $("#ph3").hide();
+            $("#ph3").removeClass("hidden");
+            $("#ph3").addClass("p-message");
+            $("#ph3").html("click for details!");
+            $("#ph3").delay(100).slideDown(400);
+        }
     });
 
-     $("#item3").mouseleave(function() {
+    $("#item3").mouseleave(function() {
         $("#ph3").slideUp(500);
     });
 
-     $("#item4").mouseenter(function() {
-        $("#ph4").hide();
-        $("#ph4").removeClass("hidden");
-        $("#ph4").addClass("p-message");
-        $("#ph4").html("click for details!");
-        $("#ph4").delay(100).slideDown(400);
-    });
+    $("#item4").mouseenter(function() {
+        if ($("#tools-page").length) 
+        {
+            var html ="<div class=\"center-leaf\" id=\"center-leaf\"><i class=\"fab fa-envira\"></i></div>";
+            html += "update product details";
 
-     $("#item4").mouseleave(function() {
+            $("#ph4").hide();
+            $("#ph4").removeClass("hidden");
+            $("#ph4").addClass("t-message");
+            $("#ph4").html(html);
+            $("#ph4").delay(100).slideDown(400);
+        }
+        else
+        {
+            $("#ph4").hide();
+            $("#ph4").removeClass("hidden");
+            $("#ph4").addClass("p-message");
+            $("#ph4").html("click for details!");
+            $("#ph4").delay(100).slideDown(400);
+        }
+        });
+
+    $("#item4").mouseleave(function() {
         $("#ph4").slideUp(500);
     });
 
-     $("#item5").mouseenter(function() {
-        $("#ph5").hide();
-        $("#ph5").removeClass("hidden");
-        $("#ph5").addClass("p-message");
-        $("#ph5").html("click for details!");
-        $("#ph5").delay(100).slideDown(400);
+    $("#item5").mouseenter(function() {
+        if ($("#tools-page").length) 
+        {
+            var html ="<div class=\"center-leaf\" id=\"center-leaf\"><i class=\"fab fa-envira\"></i></div>";
+            html += "upload new images";
+
+            $("#ph5").hide();
+            $("#ph5").removeClass("hidden");
+            $("#ph5").addClass("t-message");
+            $("#ph5").html(html);
+            $("#ph5").delay(100).slideDown(400);
+        }
+        else
+        {
+            $("#ph5").hide();
+            $("#ph5").removeClass("hidden");
+            $("#ph5").addClass("p-message");
+            $("#ph5").html("click for details!");
+            $("#ph5").delay(100).slideDown(400);
+        }
     });
 
-     $("#item5").mouseleave(function() {
+    $("#item5").mouseleave(function() {
         $("#ph5").slideUp(500);
     });
 
      $("#item6").mouseenter(function() {
-        $("#ph6").hide();
-        $("#ph6").removeClass("hidden");
-        $("#ph6").addClass("p-message");
-        $("#ph6").html("click for details!");
-        $("#ph6").delay(100).slideDown(400);
+        if ($("#tools-page").length) 
+        {
+            var html ="<div class=\"center-leaf\" id=\"center-leaf\"><i class=\"fab fa-envira\"></i></div>";
+            html += "edit photo gallery";
+
+            $("#ph6").hide();
+            $("#ph6").removeClass("hidden");
+            $("#ph6").addClass("t-message");
+            $("#ph6").html(html);
+            $("#ph6").delay(100).slideDown(400);
+        }
+        else
+        {
+            $("#ph6").hide();
+            $("#ph6").removeClass("hidden");
+            $("#ph6").addClass("p-message");
+            $("#ph6").html("click for details!");
+            $("#ph6").delay(100).slideDown(400);
+        }
     });
 
      $("#item6").mouseleave(function() {
@@ -306,11 +545,25 @@ $(document).ready(function() {
     });
 
      $("#item7").mouseenter(function() {
-        $("#ph7").hide();
-        $("#ph7").removeClass("hidden");
-        $("#ph7").addClass("p-message");
-        $("#ph7").html("click for details!");
-        $("#ph7").delay(100).slideDown(400);
+        if ($("#tools-page").length) 
+        {
+            var html ="<div class=\"center-leaf\" id=\"center-leaf\"><i class=\"fab fa-envira\"></i></div>";
+            html += "update the about write-up";
+
+            $("#ph7").hide();
+            $("#ph7").removeClass("hidden");
+            $("#ph7").addClass("t-message");
+            $("#ph7").html(html);
+            $("#ph7").delay(100).slideDown(400);
+        }
+        else
+        {
+            $("#ph7").hide();
+            $("#ph7").removeClass("hidden");
+            $("#ph7").addClass("p-message");
+            $("#ph7").html("click for details!");
+            $("#ph7").delay(100).slideDown(400);
+        }
     });
 
      $("#item7").mouseleave(function() {
@@ -318,11 +571,25 @@ $(document).ready(function() {
     });
 
      $("#item8").mouseenter(function() {
-        $("#ph8").hide();
-        $("#ph8").removeClass("hidden");
-        $("#ph8").addClass("p-message");
-        $("#ph8").html("click for details!");
-        $("#ph8").delay(100).slideDown(400);
+        if ($("#tools-page").length) 
+        {
+            var html ="<div class=\"center-leaf\" id=\"center-leaf\"><i class=\"fab fa-envira\"></i></div>";
+            html += "manage your email";
+
+            $("#ph8").hide();
+            $("#ph8").removeClass("hidden");
+            $("#ph8").addClass("t-message");
+            $("#ph8").html(html);
+            $("#ph8").delay(100).slideDown(400);
+        }
+        else
+        {
+            $("#ph8").hide();
+            $("#ph8").removeClass("hidden");
+            $("#ph8").addClass("p-message");
+            $("#ph8").html("click for details!");
+            $("#ph8").delay(100).slideDown(400);
+        }
     });
 
      $("#item8").mouseleave(function() {

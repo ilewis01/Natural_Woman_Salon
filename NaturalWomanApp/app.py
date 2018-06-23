@@ -50,6 +50,59 @@ def contact():
 	content["post_load"] = 5
 	return render_template('contact.html', **content)
 
+@app.route("/tools")
+def tools():
+	content = {}
+	content["title"] = "Natural Woman Salon | Tools"
+	content["post_load"] = 6
+	return render_template('tools.html', **content)
+
+@app.route("/admin")
+def admin():
+	content = {}
+	content["title"] = "Natural Woman Salon | Administration"
+	content["post_load"] = 7
+	return render_template('admin.html', **content)
+
+@app.route("/account")
+def account():
+	content = {}
+	content["title"] = "Natural Woman Salon | Account"
+	content["post_load"] = 8
+	return render_template('account.html', **content)
+
+@app.route("/logout")
+def logout():
+	content = {}
+	content["title"] = "Natural Woman Salon | Logout"
+	content["post_load"] = 9
+	return render_template('logout.html', **content)
+
+@app.route("/blogFrame")
+def blogFrame():
+	content = {}
+	return render_template('edit/blogFrame.html', **content)
+
+@app.route("/galleryFrame")
+def galleryFrame():
+	content = {}
+	return render_template('edit/galleryFrame.html', **content)
+
+@app.route("/serviceFrame")
+def serviceFrame():
+	content = {}
+	return render_template('edit/serviceFrame.html', **content)
+
+@app.route("/productFrame")
+def productFrame():
+	content = {}
+	return render_template('edit/productFrame.html', **content)
+
+@app.route("/infoFrame")
+def infoFrame():
+	content = {}
+	return render_template('edit/infoFrame.html', **content)
+
 if __name__ == "__main__":
 		app.run()
 

@@ -1,0 +1,155 @@
+{% extends "admin_base.html" %}
+
+{% block content %}
+
+<div id="inherit-base" class="hidden inherit-base">
+	<div class="z-5 hidden" id="alert">
+        
+    </div> 
+
+	<div class="fill-container">
+		<div class="fill-row">
+			<div class="content-head2">
+				<div class="container fill">
+					<div class="row fill">
+						<div class="col-sm-12">
+							<div class="content-title2" style="margin-right:-35px;">management tools</div>
+							<!--<div class="content-icon2" style="margin-top:14px; margin-right:5px;"><i class="fas fa-wrench"></i></div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="content-body2" id="tools-page">
+				<div class="six-split-top-format">
+					<div class="p-item-c"></div>
+
+					<div class="p-item-c">
+						<div class="p-wrapt sb0t" id="item1" onClick="javascript: load_frame('new_blog');">
+							<div class="tool-icon t-orange shadow-1">
+								<i class="fab fa-blogger-b"></i>
+							</div>
+							<div class="p-head shadow-1">
+								New Blog entry<br><p>empty</p>
+							</div>
+
+							<div class="hidden" id="ph1">
+							</div>
+							<div class="t-gradient t_gray_orange"></div>
+						</div>
+					</div>
+
+					<div class="p-item-c">
+						<div class="p-wrapt sb0t" id="item2">
+							<div class="tool-icon t-water shadow-1">
+								<i class="fas fa-user-edit"></i>
+							</div>
+							<div class="p-head shadow-1">
+								Manage existing<br>blogs
+							</div>
+							<div class="hidden" id="ph2">
+							</div>
+							<div class="t-gradient t_gray_water"></div>
+						</div>
+					</div>
+
+					<div class="p-item-c">
+						<div class="p-wrapt sb0t" id="item3">
+							<div class="tool-icon t-green shadow-1">
+								<i class="fas fa-hand-holding-usd"></i>
+							</div>
+							<div class="p-head shadow-1">
+								edit pricing<br><p>empty</p>
+							</div>
+							<div class="hidden" id="ph3">
+							</div>
+							<div class="t-gradient t_gray_green"></div>
+						</div>
+					</div>
+
+					<div class="p-item-c">
+						<div class="p-wrapt sb0t" id="item4">
+							<div class="tool-icon t-olive shadow-1">
+								<i class="fas fa-info-circle"></i>
+							</div>
+							<div class="p-head shadow-1">
+								edit product<br>details
+							</div>
+							<div class="hidden" id="ph4">
+							</div>
+							<div class="t-gradient t_gray_olive"></div>
+						</div>
+					</div>
+
+					<div class="p-item-c"></div>
+				</div>
+
+				<div class="six-split-bottom-format">
+					<div class="p-item-d"></div>
+
+					<div class="p-item-d">
+						<div class="p-wrapt sb0t" id="item5" onClick="javascript: load_frame('new_pix');">
+							<div class="tool-icon t-yellow shadow-1">
+								<i class="fab fa-blogger-b"></i>
+							</div>
+							<div class="p-head shadow-1">
+								Add New Photos<br><p>empty</p>
+							</div>
+
+							<div class="hidden" id="ph5">
+							</div>
+							<div class="t-gradient t_gray_yellow"></div>
+						</div>
+					</div>
+
+					<div class="p-item-d">
+						<div class="p-wrapt sb0t" id="item6">
+							<div class="tool-icon t-red shadow-1">
+								<i class="fas fa-user-edit"></i>
+							</div>
+							<div class="p-head shadow-1">
+								Manage existing<br>Photos
+							</div>
+							<div class="hidden" id="ph6">
+							</div>
+							<div class="t-gradient t_gray_red"></div>
+						</div>
+					</div>
+
+					<div class="p-item-d">
+						<div class="p-wrapt sb0t" id="item7">
+							<div class="tool-icon t-blue shadow-1">
+								<i class="fas fa-hand-holding-usd"></i>
+							</div>
+							<div class="p-head shadow-1">
+								edit about<br>statement
+							</div>
+							<div class="hidden" id="ph7">
+							</div>
+							<div class="t-gradient t_gray_blue"></div>
+						</div>
+					</div>
+
+					<div class="p-item-d">
+						<div class="p-wrapt sb0t" id="item8">
+							<div class="tool-icon t-purple shadow-1">
+								<i class="fas fa-info-circle"></i>
+							</div>
+							<div class="p-head shadow-1">
+								email<br><p>empty</p>
+							</div>
+							<div class="hidden" id="ph8">
+							</div>
+							<div class="t-gradient t_gray_purple"></div>
+						</div>
+					</div>
+
+					<div class="p-item"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}
