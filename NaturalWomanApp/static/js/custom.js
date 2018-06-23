@@ -60,7 +60,6 @@ function initialize(jQuery) {
     else if (post_load === "3")
     {
          load_inherited_page(post_load);
-         load_gallery();
     }
     else
     {
@@ -233,6 +232,150 @@ $(document).ready(function() {
      $("#close-this").click(function() {
         $("#alert").fadeOut(500);
     });
+
+     $("#item1").mouseenter(function() {
+        $("#ph1").hide();
+        $("#ph1").removeClass("hidden");
+        $("#ph1").addClass("p-message");
+        $("#ph1").html("click for details!");
+        $("#ph1").delay(100).slideDown(400);
+    });
+
+     $("#item1").mouseleave(function() {
+        $("#ph1").slideUp(500);
+    });
+
+     $("#item2").mouseenter(function() {
+        $("#ph2").hide();
+        $("#ph2").removeClass("hidden");
+        $("#ph2").addClass("p-message");
+        $("#ph2").html("click for details!");
+        $("#ph2").delay(100).slideDown(400);
+    });
+
+     $("#item2").mouseleave(function() {
+        $("#ph2").slideUp(500);
+    });
+
+     $("#item3").mouseenter(function() {
+        $("#ph3").hide();
+        $("#ph3").removeClass("hidden");
+        $("#ph3").addClass("p-message");
+        $("#ph3").html("click for details!");
+        $("#ph3").delay(100).slideDown(400);
+    });
+
+     $("#item3").mouseleave(function() {
+        $("#ph3").slideUp(500);
+    });
+
+     $("#item4").mouseenter(function() {
+        $("#ph4").hide();
+        $("#ph4").removeClass("hidden");
+        $("#ph4").addClass("p-message");
+        $("#ph4").html("click for details!");
+        $("#ph4").delay(100).slideDown(400);
+    });
+
+     $("#item4").mouseleave(function() {
+        $("#ph4").slideUp(500);
+    });
+
+     $("#item5").mouseenter(function() {
+        $("#ph5").hide();
+        $("#ph5").removeClass("hidden");
+        $("#ph5").addClass("p-message");
+        $("#ph5").html("click for details!");
+        $("#ph5").delay(100).slideDown(400);
+    });
+
+     $("#item5").mouseleave(function() {
+        $("#ph5").slideUp(500);
+    });
+
+     $("#item6").mouseenter(function() {
+        $("#ph6").hide();
+        $("#ph6").removeClass("hidden");
+        $("#ph6").addClass("p-message");
+        $("#ph6").html("click for details!");
+        $("#ph6").delay(100).slideDown(400);
+    });
+
+     $("#item6").mouseleave(function() {
+        $("#ph6").slideUp(500);
+    });
+
+     $("#item7").mouseenter(function() {
+        $("#ph7").hide();
+        $("#ph7").removeClass("hidden");
+        $("#ph7").addClass("p-message");
+        $("#ph7").html("click for details!");
+        $("#ph7").delay(100).slideDown(400);
+    });
+
+     $("#item7").mouseleave(function() {
+        $("#ph7").slideUp(500);
+    });
+
+     $("#item8").mouseenter(function() {
+        $("#ph8").hide();
+        $("#ph8").removeClass("hidden");
+        $("#ph8").addClass("p-message");
+        $("#ph8").html("click for details!");
+        $("#ph8").delay(100).slideDown(400);
+    });
+
+     $("#item8").mouseleave(function() {
+        $("#ph8").slideUp(500);
+    });
+
+     $("#item9").mouseenter(function() {
+        $("#ph9").hide();
+        $("#ph9").removeClass("hidden");
+        $("#ph9").addClass("p-message");
+        $("#ph9").html("click for details!");
+        $("#ph9").delay(100).slideDown(400);
+    });
+
+     $("#item9").mouseleave(function() {
+        $("#ph9").slideUp(500);
+    });
+
+     $("#item10").mouseenter(function() {
+        $("#ph10").hide();
+        $("#ph10").removeClass("hidden");
+        $("#ph10").addClass("p-message");
+        $("#ph10").html("click for details!");
+        $("#ph10").delay(100).slideDown(400);
+    });
+
+     $("#item10").mouseleave(function() {
+        $("#ph10").slideUp(500);
+    });
+
+     $("#item11").mouseenter(function() {
+        $("#ph11").hide();
+        $("#ph11").removeClass("hidden");
+        $("#ph11").addClass("p-message");
+        $("#ph11").html("click for details!");
+        $("#ph11").delay(100).slideDown(400);
+    });
+
+     $("#item11").mouseleave(function() {
+        $("#ph11").slideUp(500);
+    });
+
+     $("#item12").mouseenter(function() {
+        $("#ph12").hide();
+        $("#ph12").removeClass("hidden");
+        $("#ph12").addClass("p-message");
+        $("#ph12").html("click for details!");
+        $("#ph12").delay(100).slideDown(400);
+    });
+
+     $("#item12").mouseleave(function() {
+        $("#ph12").slideUp(500);
+    });
 });
 
 
@@ -251,129 +394,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-/* ===========================================================
- * jquery-tiltedpage-scroll.js v1.2.1
- * ===========================================================
- * Copyright 2013 Pete Rojwongsuriya.
- * http://www.thepetedesign.com
- *
- * Create a beautiful 3D tilted effect on scroll
- * with Tilted Page Scroll plugin
- *
- * https://github.com/peachananr/tiltedpage-scroll
- * 
- * License: GPL v3
- *
- * ========================================================== */
-
- function load_gallery()
- {
-    $(".main-pix").tiltedpage_scroll({angle: 20});
- };
-
-!function($){
-  
-  var defaults = {
-    sectionContainer: "> section",
-    angle: 50,
-    opacity: true,
-    scale: true,
-    outAnimation: true
-    };
-    
-
-  $.fn.tiltedpage_scroll = function(options){
-    var settings = $.extend({}, defaults, options),
-        el = $(this);
-        
-    el.find(settings.sectionContainer).addClass("tps-section");
-    
-    el.find('.tps-section').each(function(){
-      var el2 = $(this); 
-      el2.wrapInner("<div class='tps-wrapper'></div>");
-    });
-    
-    function isElementInViewport (el3) {
-      var docViewTop = $(window).scrollTop(),
-          docViewBottom = docViewTop + $(window).height(),
-          elemTop = el3.offset().top,
-          elemBottom = elemTop + el3.outerHeight(true);
-          
-      return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) );
-    }
-  
-    function elementVisibilityMayChange (el4) {
-      
-      if ( isElementInViewport(el4) ) {
-        el4.addClass("tps-inview")
-      } else {
-        el4.removeClass("tps-inview")
-      }
-    }
-    
-   
-  
-    $(window).on('DOMContentLoaded load resize scroll', function() {
-      el.find(settings.sectionContainer).each(function(){
-        elementVisibilityMayChange($(this));
-      });
-
-      
-      el.find('.tps-section.tps-inview > .tps-wrapper').each(function(index){
-        var el2 = $(this),
-            opacity = 0,
-            st = $(window).scrollTop(),
-            deg = ((el2.parent().offset().top - el2.parent().height()) - st) / $(window).height() * (settings.angle * 3),
-            scale = ((st + $(window).height() - (el2.parent().offset().top - el2.parent().height())) / ($(window).height() )) ;
-            if(scale > 1) scale = 1;
-            if(deg < 0) deg = 0;
-            
-        if(st > el2.parent().offset().top) {
-
-          if (settings.outAnimation == false) {
-            opacity = 1;
-            if(opacity < 0) opacity = 0;
-            if (deg < 0) deg = 0;
-          } else {
-            opacity = ((el2.parent().offset().top + ($(window).height() * 1.2) - st)) / ($(window).height());   
-            opacity = Math.pow(opacity,25);
-            deg = (el2.parent().offset().top - st) / $(window).height() * (settings.angle * 3);
-            scale = ((st + $(window).height() - el2.parent().offset().top ) / ($(window).height() )) ;
-          }
-          
-          
-        } else {
-            if(index != 0) {
-            var opacity = ((st + $(window).height() - el2.parent().offset().top + (el2.height()/2))/ $(window).height());
-
-                if(opacity > 1) { opacity = 1; }
-                
-            } else {
-                opacity = 1;
-            deg = 0;
-            scale = 1;
-            }
-        }
-        
-        if (settings.scale == false) scale = 1;
-        if (settings.angle == false) deg = 0;
-        if (settings.opacity == false) opacity = 1;
-        
-        el2.css({
-          'transform': 'rotateX(' + deg + 'deg) scale('+scale+', '+scale+')',
-          opacity: opacity
-        });
-      });
-    }); 
-
-  }
-  
-  
-}(window.jQuery);
 
 
 
