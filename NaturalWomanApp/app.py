@@ -81,27 +81,27 @@ def logout():
 @app.route("/blogFrame")
 def blogFrame():
 	content = {}
-	return render_template('edit/blogFrame.html', **content)
+	return render_template('blogFrame.html', **content)
 
 @app.route("/galleryFrame")
 def galleryFrame():
 	content = {}
-	return render_template('edit/galleryFrame.html', **content)
+	return render_template('galleryFrame.html', **content)
 
 @app.route("/serviceFrame")
 def serviceFrame():
 	content = {}
-	return render_template('edit/serviceFrame.html', **content)
+	return render_template('serviceFrame.html', **content)
 
 @app.route("/productFrame")
 def productFrame():
 	content = {}
-	return render_template('edit/productFrame.html', **content)
+	return render_template('productFrame.html', **content)
 
 @app.route("/infoFrame")
 def infoFrame():
 	content = {}
-	return render_template('edit/infoFrame.html', **content)
+	return render_template('infoFrame.html', **content)
 
 if __name__ == "__main__":
 		app.run()

@@ -188,6 +188,34 @@ function build_new_image()
     return html;
 }
 
+
+
+
+function build_blog_editor()
+{         
+    return "<iframe src=\"/blogFrame\" name=\"blogFrame\"></iframe>";
+}
+
+function build_gallery_editor()
+{
+    return "<iframe src=\"/galleryFrame\" name=\"galleryFrame\"></iframe>";
+}
+
+function build_description_editor()
+{
+    return "<iframe src=\"/productFrame\" name=\"productFrame\"></iframe>";
+}
+
+function build_price_editor()
+{
+    return "<iframe src=\"/serviceFrame\" name=\"priceFrame\"></iframe>";
+}
+
+function build_about_editor()
+{
+    return "<iframe src=\"/infoFrame\" name=\"aboutFrame\"></iframe>";
+}
+
 function load_frame(alert_type)
 {
     var html = "";
@@ -201,6 +229,26 @@ function load_frame(alert_type)
     {
         html = build_new_image();
     }
+    else if (alert_type === "edit_blog")
+    {
+        html = build_blog_editor();
+    }
+    else if (alert_type === "edit_gallery")
+    {
+        html = build_gallery_editor();
+    }
+    else if (alert_type === "edit_descriptions")
+    {
+        html = build_description_editor();
+    } 
+    else if (alert_type === "edit_prices")
+    {
+        html = build_price_editor();
+    } 
+    else if (alert_type === "edit_about")
+    {
+        html = build_about_editor();
+    } 
 
     if (html.length)
     {
@@ -210,7 +258,6 @@ function load_frame(alert_type)
         $("#alert").fadeIn(500);
     }
 }
-
 
 
 $( window ).on( "load", initialize);
